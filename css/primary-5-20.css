@@ -1,0 +1,200 @@
+/*
+808080 - subtle grey
+222 - not black
+*/
+
+* {margin: 0px;	padding: 0px;}
+
+body {
+	font-family: "Segoe UI", Calibri;
+	font-size: 1em;
+}
+
+
+/* Text Manipulation */
+
+h1, h2, h3, h4, h5, company, project, role, dates { font-family: Garamond, "EB Garamond";}
+.contact-details {font-family: "Segoe UI Light","Segoe UI", Calibri;}
+
+h1 { font-size: 3.5em;}
+h2 { font-size: 1.2em;}
+h3, h5, project, role, dates { font-size: 1.3em;}
+h4, company { font-size: 1.35em;}
+.contact-details, .date { font-size: 1em; }
+abstract, p.abstract { font-size: .9em; }
+
+h1, h2 {
+	font-weight: 300;
+	letter-spacing: 7px;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+
+h3 {
+	border-bottom: #808080 1px solid;
+	font-variant: small-caps;
+	font-weight: 300;
+	letter-spacing: 4px;
+	margin-bottom: 5px;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+}
+
+h4 {
+	font-weight: bold;
+}
+h4, h5 { display:inline}
+
+/* Meta: Review */
+.metaReview { background-color:rgba(255, 255, 0, 0.5)}
+.metaInprogress { color:blue}
+.metaLanguage { color: green}
+.metaHighlight { background-color: papayawhip; color: sienna;}
+
+
+			
+/* Elements */
+#title {
+	background-color: rgba(255,255,255,0.95);
+	/*margin: 20px auto;*/
+	padding-bottom: 15px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index:300;
+}
+#titlebg {visibility: hidden;}
+
+.contact-details {
+	
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.abstract {
+	color: #808080;
+	clear: both;
+	display: block;
+	text-align: justify;
+}
+
+role::before {
+	color: #222;
+	content: "\2013\00a0";
+}
+
+.date, dates {color: #222}
+dates to::before {
+	color:#222;
+	content: "\2013\00a0";
+}
+
+
+
+/* Bullet points */			
+.list-flow, .levelTwo > ul {
+	list-style: none;
+	margin-left:15px;
+}
+.list-flow li{
+	display:inline;
+}
+.list-flow li:nth-child(n+2)::before {
+	color:#222;
+	content: "\2022\00a0";
+}
+
+.list-job {
+	list-style: square;
+}
+
+#list-skills li {
+	float: left;
+	margin-bottom: 5px;
+	width: 50%;
+}
+#list-skills li:last-child {
+	margin-bottom: 15px;
+}
+
+ul.achiev {
+	list-style: circle;
+}
+
+/* Margins */
+
+.list-flow, .list-job, abstract, .abstract, company {margin-bottom: 5px;}
+.explainVerbose .list-job, .explainSimple .list-job {	margin-left: 20px;}
+
+
+/* Layout Manipulation */
+#contact ul { list-style: none;margin-bottom:10px;width: 50%;}
+dates {float:right;padding-left:5px;}
+
+/* levelOne */
+body > section > section {
+	display: block;
+	clear: both;
+	margin: 0 auto 20px;
+	padding: 0px 40px;
+	// page-break-inside: avoid;
+	max-width: 800px;
+	min-width: 400px;
+}
+
+/* levelTwo */
+body > section > section > section {
+	display:block;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	page-break-inside: avoid;
+}
+
+/* levelThree */
+body > section > section > section > section {
+	display:block;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	page-break-inside: avoid;
+}
+
+/* Responsive (?) thins */
+@media print {
+	#contact-address {float:left;}
+	#contact-email {float:right;}
+	#title { display:none; }
+	#titlebg {visibility: visible;}
+	}
+@media screen and (min-width:550px) {
+	#contact-address {float:left;}
+	#contact-email {float:right;}
+	#title {
+		background-color: rgba(255,255,255,0.95);
+		/*margin: 20px auto;*/
+		padding-bottom: 15px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index:300;
+	}
+	#title > h1 {text-shadow: 0 1px 1px #999;}
+	#titlebg {visibility: hidden;}
+}
+@media screen and (max-width:550px) {
+	#contact-address, #contact-email {margin: 0px auto;}
+	dates, .abstract {display:none;}
+	body > section > section { padding-left:5px; padding-right:5px}
+	body > section > section > section {margin-left:5px;}
+	body > section > section > section > section {margin-left:5px;}
+	#title, #titlebg {margin-bottom:5px;padding-bottom:5px}
+	#title > h1, #titlebg > h1 {font-size:2em ;}
+	#title > h2, #titlebg > h2 {font-size:1em ;}
+}
+
+
+.explainVerbose > company {
+	display: block;
+}
