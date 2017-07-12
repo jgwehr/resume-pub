@@ -148,7 +148,7 @@ ul.achiev {
 /* Margins */
 
 .list-flow, .list-job, abstract, .abstract, company {margin-bottom: 5px;}
-.explainVerbose .list-job, .explainSimple .list-job, #list-skills {	margin-left: 20px;} //ul alignment
+.explainVerbose .list-job, .explainSimple .list-job, #list-skills {	margin-left: 20px;} /*ul alignment*/
 
 
 /* Layout Manipulation */
