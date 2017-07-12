@@ -13,13 +13,15 @@ body {
 
 /* Text Manipulation */
 
-h1, h2, h3, h4, h5, company, project, role, dates { font-family: Garamond, "EB Garamond";}
+h1, h2, h3, h4, h5, company, role, dates { font-family: Garamond, "EB Garamond";}
 .contact-details {font-family: "Segoe UI Light","Segoe UI", Calibri;}
 
 h1 { font-size: 2.55em;}
 h2 { font-size: 1.25em;}
-h3, h5, project, role, dates { font-size: 1.3em;}
+h3 { font-size: 1.3em;}
 h4, company { font-size: 1.35em;}
+h5 { font-size: 1.3em;}
+role, dates { font-size: 1.3em;}
 .contact-details, .date { font-size: 1em; }
 abstract, p.abstract { font-size: .9em; font-style: italic; }
 
