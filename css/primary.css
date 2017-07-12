@@ -81,7 +81,7 @@ h4, h5 { display:inline}
 .abstract {
 	color: #808080;
 	clear: both;
-	//display: none; //toggle
+	display: none; //toggle
 	text-align: justify;
 }
 
