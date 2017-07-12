@@ -10,11 +10,8 @@ body {
 	font-size: 0.9em;
 }
 
-::selection {
-  background: #f48c42; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #f48c42; /* Gecko Browsers */
+::selection, ::-moz-selection {
+  background: #f48c42;
 }
 
 
@@ -151,7 +148,7 @@ ul.achiev {
 /* Margins */
 
 .list-flow, .list-job, abstract, .abstract, company {margin-bottom: 5px;}
-.explainVerbose .list-job, .explainSimple .list-job {	margin-left: 20px;}
+.explainVerbose .list-job, .explainSimple .list-job, #list-skills {	margin-left: 20px;} //ul alignment
 
 
 /* Layout Manipulation */
@@ -185,8 +182,15 @@ body > section > section > section > section {
 	page-break-inside: avoid;
 }
 
+
+
+
+
+
+
 /* Responsive (?) thins */
 @media print {
+	h1, h2, h3, h4, h5 {font-weight:normal;}
 	#contact-address {float:left;}
 	#contact-email {float:right;}
 	#title { display:none; }
@@ -210,6 +214,7 @@ body > section > section > section > section {
 	#title > h1 {text-shadow: 0 1px 1px #999;}
 	#titlebg {visibility: hidden;}
 }
+
 @media screen and (max-width:550px) {
 	#contact-address, #contact-email {margin: 0px auto;}
 	dates, .abstract {display:none;}
