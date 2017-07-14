@@ -190,7 +190,12 @@ body > section > section > section > section {
 
 /* Responsive (?) thins */
 @media print {
-	h1, h2, h3, h4, h5 {font-weight:normal;}
+	/* Page print layout */
+	@page {
+		margin: 1cm 0.5cm;
+	}
+	
+	h1, h2, h3, h4, h5 {letter-spacing:.05em;}
 	#contact-address {float:left;}
 	#contact-email {float:right;}
 	#title { display:none; }
